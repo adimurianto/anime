@@ -1,0 +1,123 @@
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: rgb(237,241,245);
+  margin: unset !important;
+}
+
+header {
+  position: fixed !important;
+  z-index: 101;
+  background: rgba(255, 255, 255, 0.8);
+  top: 0;
+  left: 0;
+  padding: 0 100px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+header .logo {
+  color: rgb(35, 43, 52);
+  height: 60px;
+  line-height: 60px;
+  font-size: 24px;
+  float: left;
+  font-weight: bold;
+}
+
+header nav {
+  float: right;
+}
+
+header nav ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header nav ul li {
+  list-style: none;
+  cursor: pointer;
+}
+
+header nav ul li a {
+  color: rgb(81,97,112);
+  height: 60px;
+  line-height: 60px;
+  padding: 0 20px;
+  text-decoration: none;
+  display: block;
+  font-weight: 600;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+  color: #000;
+  font-weight: 700;
+}
+
+.menu-toggle {
+  color: rgb(81,97,112);
+  float: right;
+  line-height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  display: none;
+}
+
+/* responsive */
+
+@media (max-width: 650px) {
+  header {
+    padding: 0 20px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  header nav {
+    position: absolute;
+    width: 100%;
+    height: calc(100vh - 50px);
+    background: rgba(81,97,112,0.85);
+    top: 50px;
+    left: -100%;
+    transition: 0.5s all;
+  }
+
+  header nav.active {
+    left: 0;
+  }
+
+  header nav ul {
+    display: block;
+    text-align: left;
+  }
+  header nav ul li a {
+    border-bottom: 1px solid rgba(255,255,255, 0.5);
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+  }
+}
+
+.spin-loader {
+  animation: spin-animation 0.5s infinite;
+  color: rgb(123,213,85);
+  display: inline-block; 
+}
+
+@keyframes spin-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+.toast-success{background-color:#43a047;border-radius:5px;box-shadow:0 0 7px rgba(67,160,71,.5);color:#fff;min-width:200px;padding:10px 20px;text-align:center}
