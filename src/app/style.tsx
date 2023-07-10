@@ -5,6 +5,9 @@ const Container = styled('div')`
     padding: 1rem;
     margin-left: 1rem;
     margin-right: 1rem;
+    @media (max-width: 600px) {
+        padding: 0rem;
+    }
 `;
 
 const H1 = styled('h2')`
@@ -53,6 +56,12 @@ const ActPage = styled.button`
     border-radius: 26rem;
     width: 3rem;
     height: 3rem;
+    @media (max-width: 600px) {
+        padding: 0rem;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
 `;
 
 const FirstPage = ActPage;
@@ -88,6 +97,7 @@ const ItemContent = styled('div')`
     color: rgb(81,97,112);
     @media (max-width: 600px) {
         padding: 0.15rem 0.3rem;
+        font-size: 0.8rem;
     }
 `;
 
@@ -115,6 +125,7 @@ const InnerDescDetail = styled('div')`
     margin-bottom: 5rem;
     @media (max-width: 600px) {
         padding: 0 0;
+        font-size: 0.8rem;
     }
 `;
 
